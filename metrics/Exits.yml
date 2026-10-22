@@ -1,0 +1,8 @@
+unique_name: Exits
+object_type: metric
+label: Exits
+description: Employee exits (attrition).
+calculation_method: sum
+dataset: FACT_HEADCOUNT_MONTHLY
+column: EXITS
+format: "#,##0"

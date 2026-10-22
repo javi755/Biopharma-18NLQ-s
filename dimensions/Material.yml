@@ -1,0 +1,64 @@
+unique_name: Material
+object_type: dimension
+label: Material
+description: CB-201 raw materials (phosphoramidites, solid support, reagents, packaging).
+type: standard
+hierarchies:
+- unique_name: Material Hierarchy
+  label: Material
+  folder: Material
+  levels:
+  - unique_name: Material Name
+    secondary_attributes:
+    - unique_name: Material Code
+      label: Material Code
+      dataset: DIM_MATERIAL
+      name_column: MATERIAL_CODE
+      key_columns:
+      - MATERIAL_CODE
+      folder: Material
+    - unique_name: Material Category
+      label: Material Category
+      dataset: DIM_MATERIAL
+      name_column: MATERIAL_CATEGORY
+      key_columns:
+      - MATERIAL_CATEGORY
+      folder: Material
+    - unique_name: Unit of Measure
+      label: Unit of Measure
+      dataset: DIM_MATERIAL
+      name_column: UNIT_OF_MEASURE
+      key_columns:
+      - UNIT_OF_MEASURE
+      folder: Material
+    - unique_name: Supplier
+      label: Supplier
+      dataset: DIM_MATERIAL
+      name_column: SUPPLIER_NAME
+      key_columns:
+      - SUPPLIER_NAME
+      folder: Material
+    - unique_name: Standard Lead Time Days
+      label: Standard Lead Time Days
+      description: Supplier standard lead time.
+      dataset: DIM_MATERIAL
+      name_column: STANDARD_LEAD_TIME_DAYS
+      key_columns:
+      - STANDARD_LEAD_TIME_DAYS
+      folder: Material
+    - unique_name: Is Critical Material
+      label: Is Critical Material
+      dataset: DIM_MATERIAL
+      name_column: IS_CRITICAL
+      key_columns:
+      - IS_CRITICAL
+      folder: Material
+level_attributes:
+- unique_name: Material Name
+  label: Material Name
+  description: Material Name (DIM_MATERIAL.MATERIAL_ID).
+  dataset: DIM_MATERIAL
+  name_column: MATERIAL_NAME
+  key_columns:
+  - MATERIAL_ID
+  is_unique_key: true

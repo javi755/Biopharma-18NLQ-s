@@ -1,0 +1,43 @@
+unique_name: Deal Flow
+object_type: dimension
+label: Deal Flow
+description: GSK deal cash flows.
+is_degenerate: true
+hierarchies:
+- unique_name: Flow Type
+  label: Flow Type
+  folder: GSK Deal
+  levels:
+  - unique_name: Flow Type
+- unique_name: Flow Status
+  label: Flow Status
+  folder: GSK Deal
+  levels:
+  - unique_name: Flow Status
+- unique_name: Is Forecast
+  label: Is Forecast
+  folder: GSK Deal
+  levels:
+  - unique_name: Is Forecast
+level_attributes:
+- unique_name: Flow Type
+  label: Flow Type
+  description: Upfront payment, Development/Commercial milestone, Royalty, TSA reimbursement.
+  dataset: FACT_DEAL_CASH_FLOW
+  name_column: FLOW_TYPE
+  key_columns:
+  - FLOW_TYPE
+- unique_name: Flow Status
+  label: Flow Status
+  description: Paid, Invoiced, Accrued, Achieved - pending GSK confirmation, In progress, Not started, Forecast.
+  dataset: FACT_DEAL_CASH_FLOW
+  name_column: FLOW_STATUS
+  key_columns:
+  - FLOW_STATUS
+- unique_name: Is Forecast
+  label: Is Forecast
+  description: TRUE for future / forecast flows.
+  dataset: FACT_DEAL_CASH_FLOW
+  name_column: IS_FORECAST
+  key_columns:
+  - IS_FORECAST

@@ -1,0 +1,8 @@
+unique_name: Partner Reimbursable Spend
+object_type: metric
+label: Partner Reimbursable Spend
+description: Portion of actual spend GSK reimburses under the TSA.
+calculation_method: sum
+dataset: FACT_PROGRAM_SPEND
+column: PARTNER_REIMBURSABLE_USD
+format: "$#,##0"

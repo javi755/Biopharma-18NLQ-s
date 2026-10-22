@@ -1,0 +1,6 @@
+unique_name: Batches Needed Next 12 Months
+object_type: metric_calc
+label: Batches Needed Next 12 Months
+description: Batches to cover 12 months of demand at 270 planned doses per batch (PLANNED_DOSES).
+expression: "[Measures].[Monthly Dose Demand] * 12 / 270"
+format: "#,##0.00"

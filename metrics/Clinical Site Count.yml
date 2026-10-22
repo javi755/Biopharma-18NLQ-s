@@ -1,0 +1,9 @@
+unique_name: Clinical Site Count
+object_type: metric
+label: Clinical Site Count
+description: Number of clinical sites.
+calculation_method: sum
+dataset: DIM_CLINICAL_SITE
+column: SITE_COUNT
+format: "#,##0"
+unrelated_dimensions_handling: repeat

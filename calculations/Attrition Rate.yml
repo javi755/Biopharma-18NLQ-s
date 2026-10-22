@@ -1,0 +1,6 @@
+unique_name: Attrition Rate
+object_type: metric_calc
+label: Attrition Rate
+description: Exits / ending headcount for the slice.
+expression: "IIF([Measures].[Headcount] = 0, NULL, [Measures].[Exits] / [Measures].[Headcount])"
+format: "0.0%"

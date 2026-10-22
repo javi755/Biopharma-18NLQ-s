@@ -1,0 +1,9 @@
+unique_name: Released Grams
+object_type: metric
+label: Released Grams
+description: Drug substance released, grams.
+calculation_method: sum
+dataset: FACT_MANUFACTURING_BATCH
+column: RELEASED_GRAMS
+format: "#,##0.0"
+unrelated_dimensions_handling: repeat

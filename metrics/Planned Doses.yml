@@ -1,0 +1,9 @@
+unique_name: Planned Doses
+object_type: metric
+label: Planned Doses
+description: Planned doses (270 per batch).
+calculation_method: sum
+dataset: FACT_MANUFACTURING_BATCH
+column: PLANNED_DOSES
+format: "#,##0"
+unrelated_dimensions_handling: repeat

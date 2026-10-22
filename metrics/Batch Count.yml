@@ -1,0 +1,9 @@
+unique_name: Batch Count
+object_type: metric
+label: Batch Count
+description: Manufacturing batches (all statuses).
+calculation_method: sum
+dataset: FACT_MANUFACTURING_BATCH
+column: BATCH_COUNT
+format: "#,##0"
+unrelated_dimensions_handling: repeat

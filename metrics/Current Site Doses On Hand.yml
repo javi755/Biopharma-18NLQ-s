@@ -1,0 +1,9 @@
+unique_name: Current Site Doses On Hand
+object_type: metric
+label: Current Site Doses On Hand
+description: Doses on hand at sites in the latest week of data.
+calculation_method: sum
+dataset: FACT_DOSE_SHIPMENT
+column: CURRENT_SITE_DOSES_ON_HAND
+format: "#,##0"
+unrelated_dimensions_handling: repeat

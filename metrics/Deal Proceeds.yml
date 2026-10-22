@@ -1,0 +1,8 @@
+unique_name: Deal Proceeds
+object_type: metric
+label: Deal Proceeds
+description: Upfront and milestone cash received.
+calculation_method: sum
+dataset: FACT_CASH_MONTHLY
+column: DEAL_PROCEEDS_USD
+format: "$#,##0"

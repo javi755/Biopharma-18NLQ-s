@@ -1,0 +1,8 @@
+unique_name: Actual Spend
+object_type: metric
+label: Actual Spend
+description: Actual program spend (operating outflows), USD. Monthly flow.
+calculation_method: sum
+dataset: FACT_PROGRAM_SPEND
+column: ACTUAL_USD
+format: "$#,##0"

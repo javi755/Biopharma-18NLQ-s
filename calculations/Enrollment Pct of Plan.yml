@@ -1,0 +1,7 @@
+unique_name: Enrollment Pct of Plan
+object_type: metric_calc
+label: Enrollment Pct of Plan
+description: Enrolled / planned.
+expression: "IIF([Measures].[Planned Enrollment] = 0, NULL, [Measures].[Patients Enrolled] / [Measures].[Planned\
+  \ Enrollment])"
+format: "0.0%"

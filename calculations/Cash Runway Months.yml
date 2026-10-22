@@ -1,0 +1,7 @@
+unique_name: Cash Runway Months
+object_type: metric_calc
+label: Cash Runway Months
+description: 'Months of cash: cash balance / trailing 3-month average net burn, as of the last month in the slice.'
+expression: "IIF([Measures].[Trailing 3M Avg Net Burn] = 0, NULL, [Measures].[Cash Balance] / [Measures].[Trailing\
+  \ 3M Avg Net Burn])"
+format: "#,##0.0"

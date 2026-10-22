@@ -1,0 +1,7 @@
+unique_name: Material Months of Coverage
+object_type: metric_calc
+label: Material Months of Coverage
+description: 'Months the on-hand material covers at current demand. Read by Material: the lowest runs out first.'
+expression: "IIF([Measures].[Monthly Dose Demand] = 0, NULL, [Measures].[Doses Capacity On Hand] / [Measures].[Monthly\
+  \ Dose Demand])"
+format: "#,##0.0"

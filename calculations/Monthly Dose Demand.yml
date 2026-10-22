@@ -1,0 +1,6 @@
+unique_name: Monthly Dose Demand
+object_type: metric_calc
+label: Monthly Dose Demand
+description: 'Doses needed per month at current enrollment: one dose per patient per week (52/12 per month).'
+expression: "[Measures].[Current Patients On Treatment] * 52 / 12"
+format: "#,##0"

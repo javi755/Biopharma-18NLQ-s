@@ -1,0 +1,6 @@
+unique_name: Batches Needed Next 12 Months Plus 20 Pct
+object_type: metric_calc
+label: Batches Needed Next 12 Months Plus 20 Pct
+description: Batches to cover 12 months of demand with 20% more patients.
+expression: "[Measures].[Monthly Dose Demand Plus 20 Pct] * 12 / 270"
+format: "#,##0.00"

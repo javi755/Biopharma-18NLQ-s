@@ -1,0 +1,9 @@
+unique_name: Avg Start Delay Days
+object_type: metric
+label: Avg Start Delay Days
+description: Average actual-start delay vs scheduled start, days.
+calculation_method: average
+dataset: FACT_MANUFACTURING_BATCH
+column: START_DELAY_DAYS
+format: "#,##0.0"
+unrelated_dimensions_handling: repeat

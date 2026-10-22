@@ -1,0 +1,8 @@
+unique_name: Doses Administered
+object_type: metric
+label: Doses Administered
+description: Doses given to patients (one per patient per week).
+calculation_method: sum
+dataset: FACT_DOSE_SHIPMENT
+column: DOSES_ADMINISTERED
+format: "#,##0"

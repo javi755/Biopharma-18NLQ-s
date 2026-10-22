@@ -1,0 +1,8 @@
+unique_name: Temperature Excursions
+object_type: metric
+label: Temperature Excursions
+description: Shipments with a cold-chain temperature excursion.
+calculation_method: sum
+dataset: FACT_DOSE_SHIPMENT
+column: TEMPERATURE_EXCURSIONS
+format: "#,##0"

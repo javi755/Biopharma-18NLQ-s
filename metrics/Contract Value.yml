@@ -1,0 +1,8 @@
+unique_name: Contract Value
+object_type: metric
+label: Contract Value
+description: Contracted value of upfront and milestone payments.
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: CONTRACT_VALUE_USD
+format: "$#,##0"

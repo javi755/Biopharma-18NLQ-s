@@ -1,0 +1,9 @@
+unique_name: Quantity On Hand
+object_type: metric
+label: Quantity On Hand
+description: Current raw material quantity on hand.
+calculation_method: sum
+dataset: FACT_RAW_MATERIAL_LOT
+column: QUANTITY_ON_HAND
+format: "#,##0.00"
+unrelated_dimensions_handling: repeat

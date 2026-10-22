@@ -1,0 +1,9 @@
+unique_name: Batches Supported On Hand
+object_type: metric
+label: Batches Supported On Hand
+description: Batches the on-hand material supports (per material).
+calculation_method: sum
+dataset: FACT_RAW_MATERIAL_LOT
+column: BATCHES_SUPPORTED_ON_HAND
+format: "#,##0.0"
+unrelated_dimensions_handling: repeat

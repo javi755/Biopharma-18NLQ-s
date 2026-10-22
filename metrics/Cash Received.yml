@@ -1,0 +1,8 @@
+unique_name: Cash Received
+object_type: metric
+label: Cash Received
+description: Cash received from GSK (upfront, milestones, TSA).
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: CASH_RECEIVED_USD
+format: "$#,##0"

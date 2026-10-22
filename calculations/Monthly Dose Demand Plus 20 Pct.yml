@@ -1,0 +1,6 @@
+unique_name: Monthly Dose Demand Plus 20 Pct
+object_type: metric_calc
+label: Monthly Dose Demand Plus 20 Pct
+description: Doses needed per month with 20% more patients on treatment.
+expression: "[Measures].[Current Patients On Treatment] * 1.2 * 52 / 12"
+format: "#,##0"

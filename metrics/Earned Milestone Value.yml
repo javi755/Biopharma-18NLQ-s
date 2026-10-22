@@ -1,0 +1,8 @@
+unique_name: Earned Milestone Value
+object_type: metric
+label: Earned Milestone Value
+description: Milestone value confirmed and paid by GSK. Pending confirmation is not earned.
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: EARNED_MILESTONE_USD
+format: "$#,##0"

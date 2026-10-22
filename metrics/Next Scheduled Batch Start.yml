@@ -1,0 +1,9 @@
+unique_name: Next Scheduled Batch Start
+object_type: metric
+label: Next Scheduled Batch Start
+description: Earliest scheduled start (YYYYMMDD) among batches not started.
+calculation_method: minimum
+dataset: FACT_MANUFACTURING_BATCH
+column: NEXT_SCHEDULED_START_DATE_KEY
+format: "0"
+unrelated_dimensions_handling: repeat

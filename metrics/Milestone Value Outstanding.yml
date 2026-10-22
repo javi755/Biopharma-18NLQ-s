@@ -1,0 +1,8 @@
+unique_name: Milestone Value Outstanding
+object_type: metric
+label: Milestone Value Outstanding
+description: Milestone contract value not yet received in cash.
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: OUTSTANDING_USD
+format: "$#,##0"

@@ -1,0 +1,9 @@
+unique_name: Avg Slip Days
+object_type: metric
+label: Avg Slip Days
+description: Average slot slip, days.
+calculation_method: average
+dataset: FACT_MANUFACTURING_BATCH
+column: SLIP_DAYS
+format: "#,##0.0"
+unrelated_dimensions_handling: repeat

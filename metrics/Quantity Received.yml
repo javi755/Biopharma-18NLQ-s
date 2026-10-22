@@ -1,0 +1,9 @@
+unique_name: Quantity Received
+object_type: metric
+label: Quantity Received
+description: Raw material quantity received (material unit).
+calculation_method: sum
+dataset: FACT_RAW_MATERIAL_LOT
+column: QUANTITY_RECEIVED
+format: "#,##0.00"
+unrelated_dimensions_handling: repeat

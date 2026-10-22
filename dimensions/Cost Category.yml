@@ -1,0 +1,37 @@
+unique_name: Cost Category
+object_type: dimension
+label: Cost Category
+description: Spend cost category (R&D, CMC, Clinical, G&A, TSA Support).
+type: standard
+hierarchies:
+- unique_name: Cost Category Hierarchy
+  label: Cost Category
+  folder: Cost Category
+  levels:
+  - unique_name: Cost Category Name
+    secondary_attributes:
+    - unique_name: Cost Category Group
+      label: Cost Category Group
+      description: R&D opex, G&A opex or Transition services (GSK).
+      dataset: DIM_COST_CATEGORY
+      name_column: COST_CATEGORY_GROUP
+      key_columns:
+      - COST_CATEGORY_GROUP
+      folder: Cost Category
+    - unique_name: Is Partner Reimbursable
+      label: Is Partner Reimbursable
+      description: TRUE when GSK reimburses the category (TSA).
+      dataset: DIM_COST_CATEGORY
+      name_column: IS_PARTNER_REIMBURSABLE
+      key_columns:
+      - IS_PARTNER_REIMBURSABLE
+      folder: Cost Category
+level_attributes:
+- unique_name: Cost Category Name
+  label: Cost Category Name
+  description: Cost Category Name (DIM_COST_CATEGORY.COST_CATEGORY_ID).
+  dataset: DIM_COST_CATEGORY
+  name_column: COST_CATEGORY_NAME
+  key_columns:
+  - COST_CATEGORY_ID
+  is_unique_key: true

@@ -1,0 +1,9 @@
+unique_name: Net Burn
+object_type: metric
+label: Net Burn
+description: Operating outflows minus TSA reimbursements received; excludes deal proceeds and interest. Monthly
+  flow.
+calculation_method: sum
+dataset: FACT_CASH_MONTHLY
+column: NET_BURN_USD
+format: "$#,##0"

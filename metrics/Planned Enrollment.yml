@@ -1,0 +1,8 @@
+unique_name: Planned Enrollment
+object_type: metric
+label: Planned Enrollment
+description: Enrollment the plan expected over the period.
+calculation_method: sum
+dataset: FACT_ENROLLMENT_WEEKLY
+column: PLANNED_ENROLLMENT
+format: "#,##0.0"

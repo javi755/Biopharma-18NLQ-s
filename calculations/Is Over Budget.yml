@@ -1,0 +1,7 @@
+unique_name: Is Over Budget
+object_type: metric_calc
+label: Is Over Budget
+description: 1 when actual spend is more than 5% above budget for the slice.
+expression: "IIF([Measures].[Budget] = 0, NULL, IIF(([Measures].[Actual Spend] - [Measures].[Budget]) / [Measures].[Budget]\
+  \ > 0.05, 1, 0))"
+format: "0"

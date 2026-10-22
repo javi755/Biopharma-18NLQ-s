@@ -1,0 +1,30 @@
+unique_name: Raw Material Lot
+object_type: dimension
+label: Raw Material Lot
+description: Received raw material lots.
+is_degenerate: true
+hierarchies:
+- unique_name: Lot Number
+  label: Lot Number
+  folder: Supply Chain
+  levels:
+  - unique_name: Lot Number
+- unique_name: Lot Status
+  label: Lot Status
+  folder: Supply Chain
+  levels:
+  - unique_name: Lot Status
+level_attributes:
+- unique_name: Lot Number
+  label: Lot Number
+  dataset: FACT_RAW_MATERIAL_LOT
+  name_column: LOT_NUMBER
+  key_columns:
+  - LOT_NUMBER
+- unique_name: Lot Status
+  label: Lot Status
+  description: Available or Depleted.
+  dataset: FACT_RAW_MATERIAL_LOT
+  name_column: LOT_STATUS
+  key_columns:
+  - LOT_STATUS

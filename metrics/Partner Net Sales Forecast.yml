@@ -1,0 +1,8 @@
+unique_name: Partner Net Sales Forecast
+object_type: metric
+label: Partner Net Sales Forecast
+description: GSK forecast CB-101 net sales underlying royalties.
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: PARTNER_NET_SALES_USD
+format: "$#,##0"

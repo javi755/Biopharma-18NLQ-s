@@ -1,0 +1,6 @@
+unique_name: Batch Gap Plus 20 Pct
+object_type: metric_calc
+label: Batch Gap Plus 20 Pct
+description: Batches needed over 12 months at +20% minus batches scheduled; positive = more slots needed.
+expression: "[Measures].[Batches Needed Next 12 Months Plus 20 Pct] - [Measures].[Batches Scheduled Not Started]"
+format: "#,##0.00"

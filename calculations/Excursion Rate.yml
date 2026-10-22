@@ -1,0 +1,6 @@
+unique_name: Excursion Rate
+object_type: metric_calc
+label: Excursion Rate
+description: Shipments with a temperature excursion / shipments.
+expression: "IIF([Measures].[Shipments] = 0, NULL, [Measures].[Temperature Excursions] / [Measures].[Shipments])"
+format: "0.0%"

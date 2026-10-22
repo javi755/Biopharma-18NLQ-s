@@ -1,0 +1,12 @@
+unique_name: Trailing 3M Avg Net Burn
+object_type: metric
+label: Trailing 3M Avg Net Burn
+description: Trailing three-month average net burn as of month end (last value over time).
+calculation_method: sum
+dataset: FACT_CASH_MONTHLY
+column: TRAILING_3M_AVG_NET_BURN_USD
+format: "$#,##0"
+semi_additive:
+  position: last
+  relationships:
+  - FACT_CASH_MONTHLY_Date

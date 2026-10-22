@@ -1,0 +1,43 @@
+unique_name: Batch
+object_type: dimension
+label: Batch
+description: Harbor Biologics CB-201 manufacturing batches.
+is_degenerate: true
+hierarchies:
+- unique_name: Batch Number
+  label: Batch Number
+  folder: Manufacturing
+  levels:
+  - unique_name: Batch Number
+- unique_name: Batch Release Status
+  label: Batch Release Status
+  folder: Manufacturing
+  levels:
+  - unique_name: Batch Release Status
+- unique_name: Batch Purpose
+  label: Batch Purpose
+  folder: Manufacturing
+  levels:
+  - unique_name: Batch Purpose
+level_attributes:
+- unique_name: Batch Number
+  label: Batch Number
+  description: e.g. HB-201-26-06.
+  dataset: FACT_MANUFACTURING_BATCH
+  name_column: BATCH_NUMBER
+  key_columns:
+  - BATCH_NUMBER
+- unique_name: Batch Release Status
+  label: Batch Release Status
+  description: Released, Rejected, In QC review, Scheduled, Scheduled - slot slipped.
+  dataset: FACT_MANUFACTURING_BATCH
+  name_column: RELEASE_STATUS
+  key_columns:
+  - RELEASE_STATUS
+- unique_name: Batch Purpose
+  label: Batch Purpose
+  description: Clinical supply or GLP tox / stability.
+  dataset: FACT_MANUFACTURING_BATCH
+  name_column: BATCH_PURPOSE
+  key_columns:
+  - BATCH_PURPOSE

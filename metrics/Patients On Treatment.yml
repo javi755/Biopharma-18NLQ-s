@@ -1,0 +1,12 @@
+unique_name: Patients On Treatment
+object_type: metric
+label: Patients On Treatment
+description: Patients on treatment at the end of the period (last week).
+calculation_method: sum
+dataset: FACT_DOSE_SHIPMENT
+column: PATIENTS_ON_TREATMENT
+format: "#,##0"
+semi_additive:
+  position: last
+  relationships:
+  - FACT_DOSE_SHIPMENT_Date

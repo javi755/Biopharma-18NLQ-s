@@ -1,0 +1,8 @@
+unique_name: Accrued Receivable
+object_type: metric
+label: Accrued Receivable
+description: Invoiced / accrued, not yet received.
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: ACCRUED_USD
+format: "$#,##0"

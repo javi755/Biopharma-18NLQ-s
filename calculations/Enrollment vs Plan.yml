@@ -1,0 +1,6 @@
+unique_name: Enrollment vs Plan
+object_type: metric_calc
+label: Enrollment vs Plan
+description: Enrolled minus planned.
+expression: "[Measures].[Patients Enrolled] - [Measures].[Planned Enrollment]"
+format: "#,##0.0"

@@ -1,0 +1,9 @@
+unique_name: Released Doses
+object_type: metric
+label: Released Doses
+description: Doses released by QA.
+calculation_method: sum
+dataset: FACT_MANUFACTURING_BATCH
+column: RELEASED_DOSES
+format: "#,##0"
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,35 @@
+unique_name: Owner
+object_type: dimension
+label: Owner
+description: Executive who owns the spend, headcount, deal flow, batch or enrollment line.
+type: standard
+hierarchies:
+- unique_name: Owner Hierarchy
+  label: Owner
+  folder: Owner
+  levels:
+  - unique_name: Owner Name
+    secondary_attributes:
+    - unique_name: Owner Title
+      label: Owner Title
+      dataset: DIM_PERSON
+      name_column: TITLE
+      key_columns:
+      - TITLE
+      folder: Owner
+    - unique_name: Owner Email
+      label: Owner Email
+      dataset: DIM_PERSON
+      name_column: EMAIL
+      key_columns:
+      - EMAIL
+      folder: Owner
+level_attributes:
+- unique_name: Owner Name
+  label: Owner Name
+  description: Owner Name (DIM_PERSON.PERSON_ID).
+  dataset: DIM_PERSON
+  name_column: PERSON_NAME
+  key_columns:
+  - PERSON_ID
+  is_unique_key: true

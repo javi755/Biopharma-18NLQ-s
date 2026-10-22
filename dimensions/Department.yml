@@ -1,0 +1,36 @@
+unique_name: Department
+object_type: dimension
+label: Department
+description: Company departments.
+type: standard
+hierarchies:
+- unique_name: Department Hierarchy
+  label: Department
+  folder: Department
+  levels:
+  - unique_name: Department Name
+    secondary_attributes:
+    - unique_name: Function Group
+      label: Function Group
+      description: R&D or G&A.
+      dataset: DIM_DEPARTMENT
+      name_column: FUNCTION_GROUP
+      key_columns:
+      - FUNCTION_GROUP
+      folder: Department
+    - unique_name: Department Head
+      label: Department Head
+      dataset: DIM_DEPARTMENT
+      name_column: DEPARTMENT_HEAD_NAME
+      key_columns:
+      - DEPARTMENT_HEAD_NAME
+      folder: Department
+level_attributes:
+- unique_name: Department Name
+  label: Department Name
+  description: Department Name (DIM_DEPARTMENT.DEPARTMENT_ID).
+  dataset: DIM_DEPARTMENT
+  name_column: DEPARTMENT_NAME
+  key_columns:
+  - DEPARTMENT_ID
+  is_unique_key: true

@@ -1,0 +1,12 @@
+unique_name: Cash Balance
+object_type: metric
+label: Cash Balance
+description: Cash plus treasury balance at month end (last value over time).
+calculation_method: sum
+dataset: FACT_CASH_MONTHLY
+column: CASH_BALANCE_USD
+format: "$#,##0"
+semi_additive:
+  position: last
+  relationships:
+  - FACT_CASH_MONTHLY_Date

@@ -1,0 +1,8 @@
+unique_name: Doses Lost to Excursion
+object_type: metric
+label: Doses Lost to Excursion
+description: Doses destroyed after an excursion.
+calculation_method: sum
+dataset: FACT_DOSE_SHIPMENT
+column: DOSES_LOST_TO_EXCURSION
+format: "#,##0"

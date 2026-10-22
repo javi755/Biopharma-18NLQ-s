@@ -1,0 +1,58 @@
+unique_name: Milestone
+object_type: dimension
+label: Milestone
+description: GSK CB-101 deal milestones (MS-01..MS-07; N/A for non-milestone flows).
+type: standard
+hierarchies:
+- unique_name: Milestone Hierarchy
+  label: Milestone
+  folder: Milestone
+  levels:
+  - unique_name: Milestone Code
+    secondary_attributes:
+    - unique_name: Milestone Name
+      label: Milestone Name
+      dataset: DIM_MILESTONE
+      name_column: MILESTONE_NAME
+      key_columns:
+      - MILESTONE_NAME
+      folder: Milestone
+    - unique_name: Milestone Type
+      label: Milestone Type
+      dataset: DIM_MILESTONE
+      name_column: MILESTONE_TYPE
+      key_columns:
+      - MILESTONE_TYPE
+      folder: Milestone
+    - unique_name: Trigger Definition
+      label: Trigger Definition
+      dataset: DIM_MILESTONE
+      name_column: TRIGGER_DEFINITION
+      key_columns:
+      - TRIGGER_DEFINITION
+      folder: Milestone
+    - unique_name: Milestone Date
+      label: Milestone Date
+      description: Achieved or expected date.
+      dataset: DIM_MILESTONE
+      name_column: MILESTONE_DATE
+      key_columns:
+      - MILESTONE_DATE
+      folder: Milestone
+    - unique_name: Milestone Status
+      label: Milestone Status
+      description: Paid = earned. 'Achieved - pending GSK confirmation' is not yet earned.
+      dataset: DIM_MILESTONE
+      name_column: CURRENT_STATUS
+      key_columns:
+      - CURRENT_STATUS
+      folder: Milestone
+level_attributes:
+- unique_name: Milestone Code
+  label: Milestone Code
+  description: Milestone Code (DIM_MILESTONE.MILESTONE_ID).
+  dataset: DIM_MILESTONE
+  name_column: MILESTONE_CODE
+  key_columns:
+  - MILESTONE_ID
+  is_unique_key: true

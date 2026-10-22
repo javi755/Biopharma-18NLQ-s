@@ -1,0 +1,9 @@
+unique_name: Avg Lot Lead Time Days
+object_type: metric
+label: Avg Lot Lead Time Days
+description: Average order-to-receipt days for lots.
+calculation_method: average
+dataset: FACT_RAW_MATERIAL_LOT
+column: LEAD_TIME_DAYS
+format: "#,##0.0"
+unrelated_dimensions_handling: repeat

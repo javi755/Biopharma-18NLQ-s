@@ -1,0 +1,6 @@
+unique_name: Budget Variance
+object_type: metric_calc
+label: Budget Variance
+description: Actual minus budget; positive = over budget.
+expression: "[Measures].[Actual Spend] - [Measures].[Budget]"
+format: "$#,##0"

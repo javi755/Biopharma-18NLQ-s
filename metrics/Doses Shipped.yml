@@ -1,0 +1,8 @@
+unique_name: Doses Shipped
+object_type: metric
+label: Doses Shipped
+description: Doses shipped to sites.
+calculation_method: sum
+dataset: FACT_DOSE_SHIPMENT
+column: DOSES_SHIPPED
+format: "#,##0"

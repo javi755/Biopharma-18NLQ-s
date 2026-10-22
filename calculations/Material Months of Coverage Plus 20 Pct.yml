@@ -1,0 +1,7 @@
+unique_name: Material Months of Coverage Plus 20 Pct
+object_type: metric_calc
+label: Material Months of Coverage Plus 20 Pct
+description: Months the on-hand material covers with 20% more patients. Read by Material.
+expression: "IIF([Measures].[Monthly Dose Demand Plus 20 Pct] = 0, NULL, [Measures].[Doses Capacity On Hand] / [Measures].[Monthly\
+  \ Dose Demand Plus 20 Pct])"
+format: "#,##0.0"

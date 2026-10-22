@@ -1,0 +1,9 @@
+unique_name: Released Clinical Doses
+object_type: metric
+label: Released Clinical Doses
+description: Released doses for clinical supply.
+calculation_method: sum
+dataset: FACT_MANUFACTURING_BATCH
+column: RELEASED_CLINICAL_DOSES
+format: "#,##0"
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,8 @@
+unique_name: Avg Shipment Lead Time Days
+object_type: metric
+label: Avg Shipment Lead Time Days
+description: Average depot-to-site transit days.
+calculation_method: average
+dataset: FACT_DOSE_SHIPMENT
+column: SHIPMENT_LEAD_TIME_DAYS
+format: "#,##0.0"

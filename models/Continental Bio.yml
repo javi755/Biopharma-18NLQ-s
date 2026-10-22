@@ -1,0 +1,438 @@
+unique_name: continental_bio
+object_type: model
+label: Continental Bio
+description: 'Continental Bio portfolio operations: spend vs budget, cash and runway, the GSK CB-101 deal, headcount,
+  CB-201 enrollment, manufacturing and supply chain.'
+relationships:
+- unique_name: FACT_PROGRAM_SPEND_Date
+  from:
+    dataset: FACT_PROGRAM_SPEND
+    join_columns:
+    - MONTH_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+- unique_name: FACT_PROGRAM_SPEND_Program
+  from:
+    dataset: FACT_PROGRAM_SPEND
+    join_columns:
+    - PROGRAM_ID
+  to:
+    dimension: Program
+    level: Program Code
+- unique_name: FACT_PROGRAM_SPEND_Department
+  from:
+    dataset: FACT_PROGRAM_SPEND
+    join_columns:
+    - DEPARTMENT_ID
+  to:
+    dimension: Department
+    level: Department Name
+- unique_name: FACT_PROGRAM_SPEND_Cost_Category
+  from:
+    dataset: FACT_PROGRAM_SPEND
+    join_columns:
+    - COST_CATEGORY_ID
+  to:
+    dimension: Cost Category
+    level: Cost Category Name
+- unique_name: FACT_PROGRAM_SPEND_Counterparty
+  from:
+    dataset: FACT_PROGRAM_SPEND
+    join_columns:
+    - COUNTERPARTY_ID
+  to:
+    dimension: Counterparty
+    level: Counterparty Name
+- unique_name: FACT_PROGRAM_SPEND_Owner
+  from:
+    dataset: FACT_PROGRAM_SPEND
+    join_columns:
+    - OWNER_PERSON_ID
+  to:
+    dimension: Owner
+    level: Owner Name
+- unique_name: FACT_CASH_MONTHLY_Date
+  from:
+    dataset: FACT_CASH_MONTHLY
+    join_columns:
+    - MONTH_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+- unique_name: FACT_DEAL_CASH_FLOW_Date
+  from:
+    dataset: FACT_DEAL_CASH_FLOW
+    join_columns:
+    - FLOW_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+- unique_name: FACT_DEAL_CASH_FLOW_Program
+  from:
+    dataset: FACT_DEAL_CASH_FLOW
+    join_columns:
+    - PROGRAM_ID
+  to:
+    dimension: Program
+    level: Program Code
+- unique_name: FACT_DEAL_CASH_FLOW_Counterparty
+  from:
+    dataset: FACT_DEAL_CASH_FLOW
+    join_columns:
+    - COUNTERPARTY_ID
+  to:
+    dimension: Counterparty
+    level: Counterparty Name
+- unique_name: FACT_DEAL_CASH_FLOW_Milestone
+  from:
+    dataset: FACT_DEAL_CASH_FLOW
+    join_columns:
+    - MILESTONE_ID
+  to:
+    dimension: Milestone
+    level: Milestone Code
+- unique_name: FACT_DEAL_CASH_FLOW_Owner
+  from:
+    dataset: FACT_DEAL_CASH_FLOW
+    join_columns:
+    - OWNER_PERSON_ID
+  to:
+    dimension: Owner
+    level: Owner Name
+- unique_name: FACT_HEADCOUNT_MONTHLY_Date
+  from:
+    dataset: FACT_HEADCOUNT_MONTHLY
+    join_columns:
+    - MONTH_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+- unique_name: FACT_HEADCOUNT_MONTHLY_Department
+  from:
+    dataset: FACT_HEADCOUNT_MONTHLY
+    join_columns:
+    - DEPARTMENT_ID
+  to:
+    dimension: Department
+    level: Department Name
+- unique_name: FACT_HEADCOUNT_MONTHLY_Owner
+  from:
+    dataset: FACT_HEADCOUNT_MONTHLY
+    join_columns:
+    - OWNER_PERSON_ID
+  to:
+    dimension: Owner
+    level: Owner Name
+- unique_name: FACT_ENROLLMENT_WEEKLY_Date
+  from:
+    dataset: FACT_ENROLLMENT_WEEKLY
+    join_columns:
+    - WEEK_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+- unique_name: FACT_ENROLLMENT_WEEKLY_Clinical_Site
+  from:
+    dataset: FACT_ENROLLMENT_WEEKLY
+    join_columns:
+    - SITE_ID
+  to:
+    dimension: Clinical Site
+    level: Site Name
+- unique_name: FACT_ENROLLMENT_WEEKLY_Program
+  from:
+    dataset: FACT_ENROLLMENT_WEEKLY
+    join_columns:
+    - PROGRAM_ID
+  to:
+    dimension: Program
+    level: Program Code
+- unique_name: FACT_ENROLLMENT_WEEKLY_Owner
+  from:
+    dataset: FACT_ENROLLMENT_WEEKLY
+    join_columns:
+    - OWNER_PERSON_ID
+  to:
+    dimension: Owner
+    level: Owner Name
+- unique_name: FACT_DOSE_SHIPMENT_Date
+  from:
+    dataset: FACT_DOSE_SHIPMENT
+    join_columns:
+    - WEEK_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+- unique_name: FACT_DOSE_SHIPMENT_Clinical_Site
+  from:
+    dataset: FACT_DOSE_SHIPMENT
+    join_columns:
+    - SITE_ID
+  to:
+    dimension: Clinical Site
+    level: Site Name
+- unique_name: FACT_DOSE_SHIPMENT_Program
+  from:
+    dataset: FACT_DOSE_SHIPMENT
+    join_columns:
+    - PROGRAM_ID
+  to:
+    dimension: Program
+    level: Program Code
+- unique_name: FACT_DOSE_SHIPMENT_Counterparty
+  from:
+    dataset: FACT_DOSE_SHIPMENT
+    join_columns:
+    - COUNTERPARTY_ID
+  to:
+    dimension: Counterparty
+    level: Counterparty Name
+- unique_name: FACT_MANUFACTURING_BATCH_Program
+  from:
+    dataset: FACT_MANUFACTURING_BATCH
+    join_columns:
+    - PROGRAM_ID
+  to:
+    dimension: Program
+    level: Program Code
+- unique_name: FACT_MANUFACTURING_BATCH_Counterparty
+  from:
+    dataset: FACT_MANUFACTURING_BATCH
+    join_columns:
+    - COUNTERPARTY_ID
+  to:
+    dimension: Counterparty
+    level: Counterparty Name
+- unique_name: FACT_MANUFACTURING_BATCH_Owner
+  from:
+    dataset: FACT_MANUFACTURING_BATCH
+    join_columns:
+    - OWNER_PERSON_ID
+  to:
+    dimension: Owner
+    level: Owner Name
+- unique_name: FACT_RAW_MATERIAL_LOT_Material
+  from:
+    dataset: FACT_RAW_MATERIAL_LOT
+    join_columns:
+    - MATERIAL_ID
+  to:
+    dimension: Material
+    level: Material Name
+- unique_name: FACT_RAW_MATERIAL_LOT_Counterparty
+  from:
+    dataset: FACT_RAW_MATERIAL_LOT
+    join_columns:
+    - SUPPLIER_COUNTERPARTY_ID
+  to:
+    dimension: Counterparty
+    level: Counterparty Name
+- unique_name: FACT_RAW_MATERIAL_LOT_Program
+  from:
+    dataset: FACT_RAW_MATERIAL_LOT
+    join_columns:
+    - PROGRAM_ID
+  to:
+    dimension: Program
+    level: Program Code
+- unique_name: DIM_CLINICAL_SITE_Clinical_Site
+  from:
+    dataset: DIM_CLINICAL_SITE
+    join_columns:
+    - SITE_ID
+  to:
+    dimension: Clinical Site
+    level: Site Name
+- unique_name: FACT_MANUFACTURING_BATCH_Date_Scheduled_Start
+  from:
+    dataset: FACT_MANUFACTURING_BATCH
+    join_columns:
+    - SCHEDULED_START_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+  role_play: "Batch Scheduled Start {0}"
+- unique_name: FACT_MANUFACTURING_BATCH_Date_Original_Slot
+  from:
+    dataset: FACT_MANUFACTURING_BATCH
+    join_columns:
+    - ORIGINAL_SLOT_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+  role_play: "Batch Original Slot {0}"
+- unique_name: FACT_MANUFACTURING_BATCH_Date_Actual_Start
+  from:
+    dataset: FACT_MANUFACTURING_BATCH
+    join_columns:
+    - ACTUAL_START_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+  role_play: "Batch Actual Start {0}"
+- unique_name: FACT_RAW_MATERIAL_LOT_Date_Receipt
+  from:
+    dataset: FACT_RAW_MATERIAL_LOT
+    join_columns:
+    - RECEIPT_DATE_KEY
+  to:
+    dimension: Date
+    level: Day
+  role_play: "Lot Receipt {0}"
+dimensions:
+- Batch
+- Deal Flow
+- Cash Account
+- Raw Material Lot
+metrics:
+- unique_name: Actual Spend
+  folder: Spend
+- unique_name: Budget
+  folder: Spend
+- unique_name: Partner Reimbursable Spend
+  folder: Spend
+- unique_name: Budget Variance
+  folder: Spend
+- unique_name: Budget Variance Pct
+  folder: Spend
+- unique_name: Is Over Budget
+  folder: Spend
+- unique_name: Cash Balance
+  folder: Cash and Runway
+- unique_name: Trailing 3M Avg Net Burn
+  folder: Cash and Runway
+- unique_name: Net Burn
+  folder: Cash and Runway
+- unique_name: Operating Outflows
+  folder: Cash and Runway
+- unique_name: TSA Reimbursements Received
+  folder: Cash and Runway
+- unique_name: Deal Proceeds
+  folder: Cash and Runway
+- unique_name: Interest Income
+  folder: Cash and Runway
+- unique_name: Cash Runway Months
+  folder: Cash and Runway
+- unique_name: Contract Value
+  folder: GSK Deal
+- unique_name: Cash Received
+  folder: GSK Deal
+- unique_name: Milestone Value Pending Confirmation
+  folder: GSK Deal
+- unique_name: Milestone Value Outstanding
+  folder: GSK Deal
+- unique_name: Accrued Receivable
+  folder: GSK Deal
+- unique_name: Royalty Forecast
+  folder: GSK Deal
+- unique_name: Partner Net Sales Forecast
+  folder: GSK Deal
+- unique_name: Milestone Contract Value
+  folder: GSK Deal
+- unique_name: Earned Milestone Value
+  folder: GSK Deal
+- unique_name: TSA Reimbursement Cash
+  folder: GSK Deal
+- unique_name: Headcount
+  folder: People
+- unique_name: Hires
+  folder: People
+- unique_name: Exits
+  folder: People
+- unique_name: Voluntary Exits
+  folder: People
+- unique_name: Attrition Rate
+  folder: People
+- unique_name: Patients Screened
+  folder: Clinical Enrollment
+- unique_name: Patients Enrolled
+  folder: Clinical Enrollment
+- unique_name: Planned Enrollment
+  folder: Clinical Enrollment
+- unique_name: Enrollment vs Plan
+  folder: Clinical Enrollment
+- unique_name: Enrollment Pct of Plan
+  folder: Clinical Enrollment
+- unique_name: Site Target Enrollment
+  folder: Clinical Enrollment
+- unique_name: Clinical Site Count
+  folder: Clinical Enrollment
+- unique_name: Avg Site Startup Days
+  folder: Clinical Enrollment
+- unique_name: Shipments
+  folder: Supply Chain
+- unique_name: Doses Shipped
+  folder: Supply Chain
+- unique_name: Doses Administered
+  folder: Supply Chain
+- unique_name: Temperature Excursions
+  folder: Supply Chain
+- unique_name: Doses Lost to Excursion
+  folder: Supply Chain
+- unique_name: Avg Shipment Lead Time Days
+  folder: Supply Chain
+- unique_name: Patients On Treatment
+  folder: Supply Chain
+- unique_name: Site Doses On Hand
+  folder: Supply Chain
+- unique_name: Current Patients On Treatment
+  folder: Supply Chain
+- unique_name: Current Site Doses On Hand
+  folder: Supply Chain
+- unique_name: Excursion Rate
+  folder: Supply Chain
+- unique_name: Monthly Dose Demand
+  folder: Supply Chain
+- unique_name: Monthly Dose Demand Plus 20 Pct
+  folder: Supply Chain
+- unique_name: Months of Dose Supply On Hand
+  folder: Supply Chain
+- unique_name: Batches Needed Next 12 Months
+  folder: Supply Chain
+- unique_name: Batches Needed Next 12 Months Plus 20 Pct
+  folder: Supply Chain
+- unique_name: Batch Count
+  folder: Manufacturing
+- unique_name: Batches Scheduled Not Started
+  folder: Manufacturing
+- unique_name: Planned Doses
+  folder: Manufacturing
+- unique_name: Doses Produced
+  folder: Manufacturing
+- unique_name: Released Doses
+  folder: Manufacturing
+- unique_name: Released Clinical Doses
+  folder: Manufacturing
+- unique_name: Output Grams
+  folder: Manufacturing
+- unique_name: Released Grams
+  folder: Manufacturing
+- unique_name: Max Slip Days
+  folder: Manufacturing
+- unique_name: Avg Slip Days
+  folder: Manufacturing
+- unique_name: Avg Start Delay Days
+  folder: Manufacturing
+- unique_name: Avg Yield Pct
+  folder: Manufacturing
+- unique_name: Next Scheduled Batch Start
+  folder: Manufacturing
+- unique_name: Batch Gap Plus 20 Pct
+  folder: Manufacturing
+- unique_name: Quantity Received
+  folder: Supply Chain
+- unique_name: Lot Cost
+  folder: Supply Chain
+- unique_name: Quantity On Hand
+  folder: Supply Chain
+- unique_name: Batches Supported On Hand
+  folder: Supply Chain
+- unique_name: Doses Capacity On Hand
+  folder: Supply Chain
+- unique_name: Avg Lot Lead Time Days
+  folder: Supply Chain
+- unique_name: Material Months of Coverage
+  folder: Supply Chain
+- unique_name: Material Months of Coverage Plus 20 Pct
+  folder: Supply Chain

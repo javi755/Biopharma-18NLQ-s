@@ -1,0 +1,8 @@
+unique_name: Royalty Forecast
+object_type: metric
+label: Royalty Forecast
+description: Forecast royalty income.
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: FORECAST_USD
+format: "$#,##0"

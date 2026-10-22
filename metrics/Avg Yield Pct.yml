@@ -1,0 +1,9 @@
+unique_name: Avg Yield Pct
+object_type: metric
+label: Avg Yield Pct
+description: Average batch yield, percent.
+calculation_method: average
+dataset: FACT_MANUFACTURING_BATCH
+column: YIELD_PCT
+format: "#,##0.0"
+unrelated_dimensions_handling: repeat

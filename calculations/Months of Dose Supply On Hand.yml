@@ -1,0 +1,7 @@
+unique_name: Months of Dose Supply On Hand
+object_type: metric_calc
+label: Months of Dose Supply On Hand
+description: Site doses on hand / monthly dose demand, latest week.
+expression: "IIF([Measures].[Monthly Dose Demand] = 0, NULL, [Measures].[Current Site Doses On Hand] / [Measures].[Monthly\
+  \ Dose Demand])"
+format: "#,##0.00"

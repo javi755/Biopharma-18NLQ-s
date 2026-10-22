@@ -1,0 +1,8 @@
+unique_name: Shipments
+object_type: metric
+label: Shipments
+description: Cold-chain dose shipments to sites.
+calculation_method: sum
+dataset: FACT_DOSE_SHIPMENT
+column: SHIPMENT_COUNT
+format: "#,##0"

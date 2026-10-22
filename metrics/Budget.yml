@@ -1,0 +1,8 @@
+unique_name: Budget
+object_type: metric
+label: Budget
+description: Budgeted spend, USD.
+calculation_method: sum
+dataset: FACT_PROGRAM_SPEND
+column: BUDGET_USD
+format: "$#,##0"

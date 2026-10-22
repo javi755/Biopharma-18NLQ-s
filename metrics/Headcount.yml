@@ -1,0 +1,12 @@
+unique_name: Headcount
+object_type: metric
+label: Headcount
+description: Employees at month end (last value over time).
+calculation_method: sum
+dataset: FACT_HEADCOUNT_MONTHLY
+column: HEADCOUNT
+format: "#,##0"
+semi_additive:
+  position: last
+  relationships:
+  - FACT_HEADCOUNT_MONTHLY_Date

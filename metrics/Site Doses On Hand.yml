@@ -1,0 +1,12 @@
+unique_name: Site Doses On Hand
+object_type: metric
+label: Site Doses On Hand
+description: Doses on hand at sites at the end of the period (last week).
+calculation_method: sum
+dataset: FACT_DOSE_SHIPMENT
+column: SITE_DOSES_ON_HAND
+format: "#,##0"
+semi_additive:
+  position: last
+  relationships:
+  - FACT_DOSE_SHIPMENT_Date

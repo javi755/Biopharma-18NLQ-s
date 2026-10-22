@@ -1,0 +1,8 @@
+unique_name: Milestone Value Pending Confirmation
+object_type: metric
+label: Milestone Value Pending Confirmation
+description: Milestones achieved but not yet confirmed by GSK (not earned).
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: PENDING_CONFIRMATION_USD
+format: "$#,##0"

@@ -1,0 +1,9 @@
+unique_name: Batches Scheduled Not Started
+object_type: metric
+label: Batches Scheduled Not Started
+description: Batches scheduled at the CDMO that have not started.
+calculation_method: sum
+dataset: FACT_MANUFACTURING_BATCH
+column: NOT_STARTED_BATCH_COUNT
+format: "#,##0"
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,8 @@
+unique_name: Milestone Contract Value
+object_type: metric
+label: Milestone Contract Value
+description: Contract value of milestones only (excludes upfront).
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: MILESTONE_CONTRACT_VALUE_USD
+format: "$#,##0"

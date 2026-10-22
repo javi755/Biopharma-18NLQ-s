@@ -1,0 +1,66 @@
+unique_name: Clinical Site
+object_type: dimension
+label: Clinical Site
+description: CB-201 clinical trial sites.
+type: standard
+hierarchies:
+- unique_name: Clinical Site Hierarchy
+  label: Clinical Site
+  folder: Clinical Site
+  levels:
+  - unique_name: Site Name
+    secondary_attributes:
+    - unique_name: Site City
+      label: Site City
+      dataset: DIM_CLINICAL_SITE
+      name_column: CITY
+      key_columns:
+      - CITY
+      folder: Clinical Site
+    - unique_name: Site State
+      label: Site State
+      dataset: DIM_CLINICAL_SITE
+      name_column: STATE
+      key_columns:
+      - STATE
+      folder: Clinical Site
+    - unique_name: Site Location
+      label: Site Location
+      description: City, state.
+      dataset: DIM_CLINICAL_SITE
+      name_column: SITE_LOCATION
+      key_columns:
+      - SITE_LOCATION
+      folder: Clinical Site
+    - unique_name: Principal Investigator
+      label: Principal Investigator
+      dataset: DIM_CLINICAL_SITE
+      name_column: PRINCIPAL_INVESTIGATOR
+      key_columns:
+      - PRINCIPAL_INVESTIGATOR
+      folder: Clinical Site
+    - unique_name: Site Activation Date
+      label: Site Activation Date
+      description: Date the site was activated to enroll.
+      dataset: DIM_CLINICAL_SITE
+      name_column: ACTIVATION_DATE
+      key_columns:
+      - ACTIVATION_DATE
+      folder: Clinical Site
+    - unique_name: Site Selection Date
+      label: Site Selection Date
+      description: Date the site was selected.
+      dataset: DIM_CLINICAL_SITE
+      name_column: SITE_SELECTION_DATE
+      key_columns:
+      - SITE_SELECTION_DATE
+      folder: Clinical Site
+level_attributes:
+- unique_name: Site Name
+  label: Site Name
+  description: Site Name (DIM_CLINICAL_SITE.SITE_ID).
+  dataset: DIM_CLINICAL_SITE
+  name_column: SITE_NAME
+  key_columns:
+  - SITE_ID
+  is_unique_key: true

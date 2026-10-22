@@ -1,0 +1,9 @@
+unique_name: Avg Site Startup Days
+object_type: metric
+label: Avg Site Startup Days
+description: 'Average days from site selection to activation: the lead time to add a new trial site.'
+calculation_method: average
+dataset: DIM_CLINICAL_SITE
+column: STARTUP_DAYS
+format: "#,##0.0"
+unrelated_dimensions_handling: repeat

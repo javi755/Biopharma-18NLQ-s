@@ -1,0 +1,8 @@
+unique_name: TSA Reimbursements Received
+object_type: metric
+label: TSA Reimbursements Received
+description: Cash received from GSK for TSA services.
+calculation_method: sum
+dataset: FACT_CASH_MONTHLY
+column: TSA_REIMBURSEMENTS_USD
+format: "$#,##0"

@@ -1,0 +1,9 @@
+unique_name: Current Patients On Treatment
+object_type: metric
+label: Current Patients On Treatment
+description: Patients on treatment in the latest week of data. Independent of the date in the query.
+calculation_method: sum
+dataset: FACT_DOSE_SHIPMENT
+column: CURRENT_PATIENTS_ON_TREATMENT
+format: "#,##0"
+unrelated_dimensions_handling: repeat

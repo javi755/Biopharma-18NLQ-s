@@ -1,0 +1,9 @@
+unique_name: Site Target Enrollment
+object_type: metric
+label: Site Target Enrollment
+description: Total enrollment target for each site (full trial).
+calculation_method: sum
+dataset: DIM_CLINICAL_SITE
+column: TARGET_ENROLLMENT
+format: "#,##0"
+unrelated_dimensions_handling: repeat

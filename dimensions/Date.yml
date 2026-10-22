@@ -1,0 +1,148 @@
+unique_name: Date
+object_type: dimension
+label: Date
+description: Calendar 2025-2030; fiscal year = calendar year. As-of date 2026-10-31.
+type: time
+calculation_groups:
+- unique_name: Date Calculations
+  label: Date Calculations
+  folder: Date
+  description: Time intelligence over any measure.
+  calculated_members:
+  - unique_name: Current
+    template: Current
+    use_input_metric_format: true
+  - unique_name: Previous
+    template: Previous
+    use_input_metric_format: true
+  - unique_name: Current vs Previous
+    template: Current vs Previous
+    use_input_metric_format: true
+  - unique_name: Current vs Previous Pct
+    template: Current vs Previous Pct
+    format: percent
+  - unique_name: Last Year
+    template: Last Year
+    use_input_metric_format: true
+  - unique_name: Year to Date
+    template: Year to Date
+    use_input_metric_format: true
+  - unique_name: Quarter to Date
+    template: Quarter to Date
+    use_input_metric_format: true
+hierarchies:
+- unique_name: Calendar
+  label: Calendar
+  folder: Date
+  filter_empty: 'yes'
+  levels:
+  - unique_name: Year
+  - unique_name: Quarter
+  - unique_name: Month
+  - unique_name: Day
+    secondary_attributes:
+    - unique_name: Relative Year
+      label: Relative Year
+      description: Current / Last / Future year as of 2026-10-31.
+      dataset: DIM_DATE
+      name_column: RELATIVE_YEAR
+      key_columns:
+      - RELATIVE_YEAR
+      folder: Date
+    - unique_name: Relative Quarter
+      label: Relative Quarter
+      description: '''Last Quarter'' = last complete quarter before the as-of date (2026 Q3).'
+      dataset: DIM_DATE
+      name_column: RELATIVE_QUARTER
+      key_columns:
+      - RELATIVE_QUARTER
+      folder: Date
+    - unique_name: Relative Month
+      label: Relative Month
+      description: Current / Last / Earlier / Future month.
+      dataset: DIM_DATE
+      name_column: RELATIVE_MONTH
+      key_columns:
+      - RELATIVE_MONTH
+      folder: Date
+    - unique_name: Asset Sale Period
+      label: Asset Sale Period
+      description: Pre-sale, Sale month (Mar 2026) or Post-sale, relative to the CB-101 sale to GSK.
+      dataset: DIM_DATE
+      name_column: ASSET_SALE_PERIOD
+      key_columns:
+      - ASSET_SALE_PERIOD
+      folder: Date
+    - unique_name: Is Actuals Period
+      label: Is Actuals Period
+      description: TRUE through 2026-10-31.
+      dataset: DIM_DATE
+      name_column: IS_ACTUALS_PERIOD
+      key_columns:
+      - IS_ACTUALS_PERIOD
+      folder: Date
+    - unique_name: Is Month End
+      label: Is Month End
+      dataset: DIM_DATE
+      name_column: IS_MONTH_END
+      key_columns:
+      - IS_MONTH_END
+      folder: Date
+    - unique_name: Day of Week
+      label: Day of Week
+      dataset: DIM_DATE
+      name_column: DAY_OF_WEEK_NAME
+      key_columns:
+      - DAY_OF_WEEK_NAME
+      folder: Date
+- unique_name: Weekly
+  label: Weekly
+  folder: Date
+  filter_empty: 'yes'
+  levels:
+  - unique_name: Week
+  - unique_name: Day
+level_attributes:
+- unique_name: Year
+  label: Year
+  dataset: DIM_DATE
+  name_column: YEAR_NAME
+  key_columns:
+  - YEAR_NUM
+  sort_column: YEAR_NUM
+  time_unit: year
+- unique_name: Quarter
+  label: Quarter
+  dataset: DIM_DATE
+  name_column: QUARTER_NAME
+  key_columns:
+  - QUARTER_KEY
+  sort_column: QUARTER_KEY
+  time_unit: quarter
+- unique_name: Month
+  label: Month
+  description: Calendar month, e.g. 'Oct 2026'.
+  dataset: DIM_DATE
+  name_column: MONTH_NAME
+  key_columns:
+  - MONTH_KEY
+  sort_column: MONTH_KEY
+  time_unit: month
+- unique_name: Week
+  label: Week
+  description: Week starting Monday, e.g. 'Week of 2026-10-26'.
+  dataset: DIM_DATE
+  name_column: WEEK_NAME
+  key_columns:
+  - WEEK_KEY
+  sort_column: WEEK_KEY
+  time_unit: week
+- unique_name: Day
+  label: Day
+  dataset: DIM_DATE
+  name_column: DATE_NAME
+  key_columns:
+  - DATE_KEY
+  sort_column: DATE_KEY
+  time_unit: day
+  is_unique_key: true

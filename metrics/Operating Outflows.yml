@@ -1,0 +1,8 @@
+unique_name: Operating Outflows
+object_type: metric
+label: Operating Outflows
+description: Monthly operating cash outflows.
+calculation_method: sum
+dataset: FACT_CASH_MONTHLY
+column: OPERATING_OUTFLOWS_USD
+format: "$#,##0"

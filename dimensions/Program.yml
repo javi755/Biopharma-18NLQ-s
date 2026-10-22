@@ -1,0 +1,77 @@
+unique_name: Program
+object_type: dimension
+label: Program
+description: Drug development programs (CB-101, CB-201, CB-214, CB-230, Platform).
+type: standard
+hierarchies:
+- unique_name: Program Hierarchy
+  label: Program
+  folder: Program
+  levels:
+  - unique_name: Program Code
+    secondary_attributes:
+    - unique_name: Program Name
+      label: Program Name
+      description: Molecule / program name, e.g. rivastide.
+      dataset: DIM_PROGRAM
+      name_column: PROGRAM_NAME
+      key_columns:
+      - PROGRAM_NAME
+      folder: Program
+    - unique_name: Program Display Name
+      label: Program Display Name
+      description: Code plus molecule name.
+      dataset: DIM_PROGRAM
+      name_column: PROGRAM_DISPLAY_NAME
+      key_columns:
+      - PROGRAM_DISPLAY_NAME
+      folder: Program
+    - unique_name: Modality
+      label: Modality
+      description: Therapeutic modality.
+      dataset: DIM_PROGRAM
+      name_column: MODALITY
+      key_columns:
+      - MODALITY
+      folder: Program
+    - unique_name: Indication
+      label: Indication
+      description: Disease indication.
+      dataset: DIM_PROGRAM
+      name_column: INDICATION
+      key_columns:
+      - INDICATION
+      folder: Program
+    - unique_name: Development Stage
+      label: Development Stage
+      description: Current development phase.
+      dataset: DIM_PROGRAM
+      name_column: DEVELOPMENT_STAGE
+      key_columns:
+      - DEVELOPMENT_STAGE
+      folder: Program
+    - unique_name: Program Status
+      label: Program Status
+      description: Active, divested to GSK, or under review.
+      dataset: DIM_PROGRAM
+      name_column: PROGRAM_STATUS
+      key_columns:
+      - PROGRAM_STATUS
+      folder: Program
+    - unique_name: Program Owner
+      label: Program Owner
+      description: Executive accountable for the program.
+      dataset: DIM_PROGRAM
+      name_column: PROGRAM_OWNER_NAME
+      key_columns:
+      - PROGRAM_OWNER_NAME
+      folder: Program
+level_attributes:
+- unique_name: Program Code
+  label: Program Code
+  description: Program Code (DIM_PROGRAM.PROGRAM_ID).
+  dataset: DIM_PROGRAM
+  name_column: PROGRAM_CODE
+  key_columns:
+  - PROGRAM_ID
+  is_unique_key: true

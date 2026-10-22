@@ -1,0 +1,8 @@
+unique_name: Hires
+object_type: metric
+label: Hires
+description: New hires.
+calculation_method: sum
+dataset: FACT_HEADCOUNT_MONTHLY
+column: HIRES
+format: "#,##0"

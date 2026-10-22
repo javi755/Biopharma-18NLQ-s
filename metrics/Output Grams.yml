@@ -1,0 +1,9 @@
+unique_name: Output Grams
+object_type: metric
+label: Output Grams
+description: Drug substance produced, grams.
+calculation_method: sum
+dataset: FACT_MANUFACTURING_BATCH
+column: OUTPUT_GRAMS
+format: "#,##0.0"
+unrelated_dimensions_handling: repeat

@@ -1,0 +1,8 @@
+unique_name: Patients Enrolled
+object_type: metric
+label: Patients Enrolled
+description: Patients enrolled in the CB-201 trial.
+calculation_method: sum
+dataset: FACT_ENROLLMENT_WEEKLY
+column: PATIENTS_ENROLLED
+format: "#,##0"

@@ -1,0 +1,8 @@
+unique_name: Interest Income
+object_type: metric
+label: Interest Income
+description: Treasury interest income.
+calculation_method: sum
+dataset: FACT_CASH_MONTHLY
+column: INTEREST_INCOME_USD
+format: "$#,##0"

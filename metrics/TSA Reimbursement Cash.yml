@@ -1,0 +1,8 @@
+unique_name: TSA Reimbursement Cash
+object_type: metric
+label: TSA Reimbursement Cash
+description: TSA reimbursement cash received per the deal ledger.
+calculation_method: sum
+dataset: FACT_DEAL_CASH_FLOW
+column: TSA_REIMBURSEMENT_CASH_USD
+format: "$#,##0"

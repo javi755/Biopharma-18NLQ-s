@@ -1,0 +1,6 @@
+unique_name: Budget Variance Pct
+object_type: metric_calc
+label: Budget Variance Pct
+description: (Actual - Budget) / Budget.
+expression: "IIF([Measures].[Budget] = 0, NULL, ([Measures].[Actual Spend] - [Measures].[Budget]) / [Measures].[Budget])"
+format: "0.0%"

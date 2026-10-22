@@ -1,0 +1,9 @@
+unique_name: Lot Cost
+object_type: metric
+label: Lot Cost
+description: Cost of lots received.
+calculation_method: sum
+dataset: FACT_RAW_MATERIAL_LOT
+column: LOT_COST_USD
+format: "$#,##0"
+unrelated_dimensions_handling: repeat

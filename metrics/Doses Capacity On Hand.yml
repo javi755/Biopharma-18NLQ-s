@@ -1,0 +1,9 @@
+unique_name: Doses Capacity On Hand
+object_type: metric
+label: Doses Capacity On Hand
+description: Doses the on-hand material supports (per material).
+calculation_method: sum
+dataset: FACT_RAW_MATERIAL_LOT
+column: DOSES_CAPACITY_ON_HAND
+format: "#,##0"
+unrelated_dimensions_handling: repeat
